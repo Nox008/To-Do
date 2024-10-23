@@ -1,0 +1,20 @@
+.submitButton{
+    margin-top: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(139, 139, 212);
+    color: black ;
+    height: 30px;
+    cursor: pointer;
+}
+.desc{
+    margin-top: 10px;
+}
+.submitButton:hover{
+    background-color: rgb(91, 91, 214);
+    color: azure;
+    transition: ease-in;
+}
+label{
+    margin-top: 10px;
+}
