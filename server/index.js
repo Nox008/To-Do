@@ -43,6 +43,11 @@ app.post('/api/hobbies', async (req, res) => {
   }
 });
 
+app.get('/api/gettodolist', async (req,res) => {
+  const todolist = await Hobbie.find()
+  todolist.length>0?res.json(todolist):res.json([])
+})
+
 // Set the server to listen on a port
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {

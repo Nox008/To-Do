@@ -1,0 +1,53 @@
+/* Custom container */
+.container1 {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Custom row */
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+  }
+  
+  /* Custom column */
+  .col {
+    flex: 1;
+    padding: 0 15px;
+  }
+  
+  /* Custom table styling */
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+  }
+  
+  .table th, 
+  .table td {
+    padding: 12px 15px;
+    text-align: left;
+    border: 1px solid #ddd;
+  }
+  
+  .table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+  }
+  
+  .table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .table tbody tr td {
+    padding: 8px 12px;
+  }
+  
+  /* Message when no data is found */
+  .table tbody tr td[colspan="4"] {
+    text-align: center;
+    font-style: italic;
+  }
+  

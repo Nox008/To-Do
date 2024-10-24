@@ -1,5 +1,6 @@
 import React from 'react'
 import MainComp from './mainComp'
+import List from './list'
 
 const App = () => {
   return (
@@ -8,6 +9,7 @@ const App = () => {
     <div className="container">
     <MainComp/>
     </div>
+    <List/>
     </>
   )
 }
