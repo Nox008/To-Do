@@ -13,6 +13,19 @@ function List() {
        })
        .catch(err=>console.log(err))
     })
+    const deleteList = (id) =>{
+    const ans = window.confirm('Are you sure you want to delete?')
+    
+    const url = `http://localhost:5000/api/delTodolist/${id}`
+    if(ans){
+    axios.delete(url)
+    .then((res)=>{
+      alert(res.data)
+    })
+    
+  }else {alert('Action Cancelled')}
+
+    }
   return (
     <>
 <div className="container1">
@@ -24,6 +37,7 @@ function List() {
             <th>Title</th>
             <th>Description</th>
             <th>Task Date</th>
+            <th>Actions</th>
           </tr>
         </thead>
         <tbody>
@@ -33,6 +47,11 @@ function List() {
                 <td>{list.hobbie}</td>
                 <td>{list.desc}</td>
                 <td>{list.date}</td>
+                <td>
+                  <button style={{padding:'10px'}} onClick={()=>{
+                    deleteList(list._id)
+                  }}>Delete</button>
+                </td>
               </tr>
             ))
           ) : (

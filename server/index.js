@@ -48,6 +48,13 @@ app.get('/api/gettodolist', async (req,res) => {
   todolist.length>0?res.json(todolist):res.json([])
 })
 
+app.delete('/api/delTodolist/:id', async(req,res)=>{
+  const idno = req.params.id;
+  console.log(idno)
+  await Hobbie.deleteOne({_id:idno})
+  res.json("Data has been deleted")
+})
+
 // Set the server to listen on a port
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
