@@ -48,7 +48,7 @@ function List() {
                 <td>{list.desc}</td>
                 <td>{list.date}</td>
                 <td>
-                  <button style={{padding:'10px'}} onClick={()=>{
+                  <button className='deleteButton' style={{padding:'10px'}} onClick={()=>{
                     deleteList(list._id)
                   }}>Delete</button>
                 </td>

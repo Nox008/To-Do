@@ -1,6 +1,7 @@
 import React from 'react'
 import MainComp from './mainComp'
 import List from './list'
+import { Outlet } from 'react-router-dom'
 
 const App = () => {
   return (
